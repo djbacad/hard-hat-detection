@@ -1,0 +1,35 @@
+Failure # 1 (occurred at 2023-05-13_11-25-44)
+[36mray::ImplicitFunc.train()[39m (pid=29856, ip=127.0.0.1, repr=_tune)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ultralytics\yolo\data\utils.py", line 195, in check_det_dataset
+    data = check_file(dataset)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ultralytics\yolo\utils\checks.py", line 292, in check_file
+    raise FileNotFoundError(f"'{file}' does not exist")
+FileNotFoundError: '/hard-hat-detection/datasets/custom_hard_hat.yaml' does not exist
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ImplicitFunc.train()[39m (pid=29856, ip=127.0.0.1, repr=_tune)
+  File "python\ray\_raylet.pyx", line 870, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 921, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 877, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 881, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 821, in ray._raylet.execute_task.function_executor
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\_private\function_manager.py", line 670, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 460, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\tune\trainable\trainable.py", line 384, in train
+    raise skipped from exception_cause(skipped)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\tune\trainable\function_trainable.py", line 336, in entrypoint
+    return self._trainable_func(
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 460, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ray\tune\trainable\function_trainable.py", line 653, in _trainable_func
+    output = fn()
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ultralytics\yolo\engine\model.py", line 436, in _tune
+    self.train(**config)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ultralytics\yolo\engine\model.py", line 365, in train
+    self.trainer = TASK_MAP[self.task][1](overrides=overrides, _callbacks=self.callbacks)
+  File "c:\Users\djbac\anaconda3\envs\torch-nightly-gpu\lib\site-packages\ultralytics\yolo\engine\trainer.py", line 126, in __init__
+    raise RuntimeError(emojis(f"Dataset '{clean_url(self.args.data)}' error ❌ {e}")) from e
+RuntimeError: Dataset '\hard-hat-detection\datasets\custom_hard_hat.yaml' error  '/hard-hat-detection/datasets/custom_hard_hat.yaml' does not exist
