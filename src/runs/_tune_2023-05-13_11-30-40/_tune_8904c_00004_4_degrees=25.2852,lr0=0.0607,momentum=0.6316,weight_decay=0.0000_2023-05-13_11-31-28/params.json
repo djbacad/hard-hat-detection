@@ -1,7 +1,0 @@
-{
-  "data": "../../hard-hat-detection/datasets/custom_hard_hat.yaml",
-  "degrees": 25.285243538867334,
-  "lr0": 0.06073484226182096,
-  "momentum": 0.6315827412135437,
-  "weight_decay": 1.58895049166915e-05
-}
