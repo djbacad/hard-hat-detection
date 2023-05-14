@@ -1,5 +1,5 @@
 names:
-- helmet
+- hardhat
 nc: 1
 roboflow:
   license: Public Domain
