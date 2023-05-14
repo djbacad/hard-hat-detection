@@ -1,0 +1,6 @@
+ClearML Task: created new task id=0668fe2e83174417aaa37bd5857f1261
+ClearML results page: https://app.clear.ml/projects/88657d4a51d243038aca32dc878f0383/experiments/0668fe2e83174417aaa37bd5857f1261/output/log
+======> WARNING! Git diff too large to store (584kb), skipping uncommitted changes <======
+ClearML Monitor: Could not detect iteration reporting, falling back to iterations as seconds-from-start
+ClearML Monitor: Reporting detected, reverting back to iteration based reporting
+2023-05-15 01:14:53,750 - clearml.storage - INFO - Starting upload: e:\files_main\projects_ml\hard-hat-detection\ultralytics\runs\detect\yolov8n_custom_default\weights\best.pt => https://files.clear.ml/YOLOv8/yolov8n_custom_default.0668fe2e83174417aaa37bd5857f1261/models/best.pt
